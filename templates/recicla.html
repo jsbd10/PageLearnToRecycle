@@ -9,7 +9,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../static/style/reciclar.css" />
+    <link rel="stylesheet" href="../static/style/recicla.css" />
     <title>Recicla</title>
   </head>
   <body>
@@ -35,7 +35,7 @@
             >
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="">About</a>
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url_for('login')}}">Login</a>
@@ -60,6 +60,7 @@
         <br />
         <button type="submit" id="Enviar" name="Enviar">Enviar</button>
       </section>
+      <img id="caneca" src="../static/img/canecas.png" alt="" />
     </div>
     <script type="text/javascript" src="../static/js/recicla.js"></script>
   </body>
