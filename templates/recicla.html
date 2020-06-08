@@ -44,24 +44,22 @@
       </div>
     </nav>
 
-    <div id="container">
+    <form id="container" action="/upload" method="POST" enctype="multipart/form-data">
       <h1>Show me we are going to recycle!</h1>
       <section class="text-center">
-        <input
-          type="file"
-          class="video"
-          id="archivoInput"
-          accept="video/mp4 image/jpg"
-          onchange="validarExt()"
-        />
+        <input class="video" id="archivoInput" type="file" name="archivo"  onchange="validarExt()">
+        <button type="submit" id="Enviar" name="Enviar" >Enviar</button>
         <br />
         <br />
         <div id="visorArchivo"></div>
         <br />
-        <button type="submit" id="Enviar" name="Enviar">Enviar</button>
+        {% for answer in answers %}
+          <h1 style="color:black">{{answer}}</h1>
+        {% endfor %}
       </section>
       <img id="caneca" src="../static/img/canecas.png" alt="" />
     </div>
+    </form>
     <script type="text/javascript" src="../static/js/recicla.js"></script>
   </body>
 </html>
