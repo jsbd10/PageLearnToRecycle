@@ -2,8 +2,6 @@ function validarExt() {
   var archivoInput = document.getElementById("archivoInput");
   var archivoRuta = archivoInput.value;
   var extPermitidas = /(.mp4|.MP4|.JPG|.jpg|.png|.PNG)$/i;
-  /*console.log(archivoInput);
-    console.log(archivoRuta); */
   if (!extPermitidas.exec(archivoRuta)) {
     alert("Extension no permitida");
     archivoInput.value = "";
@@ -19,3 +17,4 @@ function validarExt() {
     }
   }
 }
+
