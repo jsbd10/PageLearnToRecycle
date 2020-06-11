@@ -54,10 +54,19 @@
         <div id="visorArchivo"></div>
         <br />
         {% for answer in answers %}
-          <h1 style="color:black">{{answer}}</h1>
+          {% if (answer != 'Verde') and (answer != 'Azul') and (answer != 'Gris')   %}
+            <h1 style="color:black">{{answer}}</h1>
+          {% endif %}
+
+          {% if (answer == 'vidrio') or (answer == 'botellas') or (answer == 'metal')%}
+            <img style="width:300px" src="../static/img/azul.png" alt="imagen azul">
+          {% elif (answer == 'carton') or (answer == 'papel') %}
+            <img style="width:300px" src="../static/img/canecagis.png" alt="imagen gris">
+          {% elif (answer == 'basura') %}
+            <img style="width:300px" src="../static/img/canecaverde.png"  alt="imagen verde">
+          {% endif %}
         {% endfor %}
       </section>
-      <img id="caneca" src="../static/img/canecas.png" alt="" />
     </div>
     </form>
     <script type="text/javascript" src="../static/js/recicla.js"></script>
